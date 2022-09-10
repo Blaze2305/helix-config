@@ -1,0 +1,30 @@
+theme = "monokai"
+
+[editor]
+true-color = true
+line-number = "relative"
+idle-timeout = 100
+# mouse = false
+
+
+[editor.cursor-shape]
+insert = "underline"
+normal = "underline"
+select = "underline"
+
+[keys.insert]
+k = { j = "normal_mode" } # Maps `jk` to exit insert mode
+
+[editor.file-picker]
+hidden = false
+git-ignore = false
+
+
+[editor.whitespace.render]
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
