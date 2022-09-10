@@ -4,6 +4,8 @@ theme = "monokai"
 true-color = true
 line-number = "relative"
 idle-timeout = 100
+cursorline = true
+color-modes = true
 # mouse = false
 
 
@@ -12,13 +14,15 @@ insert = "underline"
 normal = "underline"
 select = "underline"
 
+[keys.normal]
+"#" = ["select_all",":pipe goimports",":w"]
+
 [keys.insert]
-k = { j = "normal_mode" } # Maps `jk` to exit insert mode
+k = { j = "normal_mode" }
 
 [editor.file-picker]
 hidden = false
-git-ignore = false
-
+git-ignore = true
 
 [editor.whitespace.render]
 tab = "all"
@@ -26,5 +30,18 @@ newline = "none"
 
 [editor.whitespace.characters]
 nbsp = "⍽"
-tab = "→"
+# tab = "→" #removed it for the new editor.indent-guides.render key
 newline = "⏎"
+
+[editor.indent-guides]
+render = true
+
+
+[editor.lsp]
+display-messages = true
+
+
+[editor.statusline]
+left = ["mode", "spinner","file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
