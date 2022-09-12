@@ -8,7 +8,6 @@ cursorline = true
 color-modes = true
 # mouse = false
 
-
 [editor.cursor-shape]
 insert = "underline"
 normal = "underline"
@@ -16,9 +15,14 @@ select = "underline"
 
 [keys.normal]
 "#" = ["select_all",":pipe goimports",":w"]
+"C-S-r" = ":reload"
 
 [keys.insert]
 k = { j = "normal_mode" }
+up = "move_line_up"
+down = "move_line_down"
+left = "move_char_left"
+right = "move_char_right"
 
 [editor.file-picker]
 hidden = false
