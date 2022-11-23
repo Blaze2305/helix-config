@@ -15,7 +15,9 @@ select = "underline"
 
 [keys.normal]
 "#" = ["select_all",":pipe goimports",":w"]
-"C-S-r" = ":reload"
+"S-R" = ":reload"
+c = ["trim_selections","change_selection"]
+
 
 [keys.insert]
 k = { j = "normal_mode" }
@@ -23,6 +25,7 @@ up = "move_line_up"
 down = "move_line_down"
 left = "move_char_left"
 right = "move_char_right"
+C-p = "signature_help"
 
 [editor.file-picker]
 hidden = false
@@ -43,6 +46,7 @@ render = true
 
 [editor.lsp]
 display-messages = true
+auto-signature-help = false
 
 
 [editor.statusline]
