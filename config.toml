@@ -1,4 +1,5 @@
-theme = "ayu_dark"
+# theme = "ayu_dark"
+theme = "dracula_at_night"
 
 [editor]
 true-color = true
@@ -8,6 +9,7 @@ cursorline = true
 color-modes = true
 auto-save = true
 bufferline = "multiple"
+soft-wrap.enable = true
 # mouse = false
 
 [editor.cursor-shape]
@@ -51,6 +53,7 @@ auto-signature-help = false
 
 
 [editor.statusline]
-left = ["mode", "spinner","file-name"]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+left = [ "spinner","spacer","separator","spacer","file-name"]
+center = ["mode","mode","mode","mode","mode","mode","mode","mode",]
+right = ["diagnostics", "spacer","spacer","separator","selections", "spacer","spacer","separator","spacer","spacer","position","position-percentage","spacer","spacer","separator", "spacer","spacer","file-encoding", "file-line-ending", "file-type"]
 separator = "│"
