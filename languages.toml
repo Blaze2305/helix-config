@@ -5,16 +5,10 @@ auto-format = false
 [[language]]
 name = "python"
 indent = { tab-width = 4 , unit = "\t" }
+formatter = { command = "black", args = ["--quiet", "-"] }
+auto-format = true
 
-[language.config.pylsp.plugins.flake8]
-enabled = false
 
-[language.config.pylsp.plugins.autopep8]
-enabled = false
-
-[language.config.pylsp.plugins.pyflakes]
-enabled = false
-
-[language.config.pylsp.plugins.pycodestyle]
-enabled = false
+[language-server.pylsp]
+config = { pylsp = { plugins = { flake8 = false, autopep8 = false, pyflakes = false, pycodestyle = false } } }
 
