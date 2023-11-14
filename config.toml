@@ -1,9 +1,10 @@
-# theme = "ayu_dark"
-theme = "dracula_at_night"
+theme = "ayu_dark"
+# theme = "monokai"
+# theme = "dracula"
 
 [editor]
 true-color = true
-line-number = "relative"
+line-number = "absolute"
 idle-timeout = 100
 cursorline = true
 color-modes = true
@@ -32,7 +33,7 @@ C-p = "signature_help"
 
 [editor.file-picker]
 hidden = false
-git-ignore = true
+git-ignore = false
 
 [editor.whitespace.render]
 tab = "all"
@@ -47,13 +48,14 @@ newline = "⏎"
 render = true
 
 
-[editor.lsp]
-display-messages = true
-auto-signature-help = false
+# [editor.lsp]
+# display-inlay-hints = true
+# display-messages = true
+# auto-signature-help = false
 
 
 [editor.statusline]
 left = [ "spinner","spacer","separator","spacer","file-name"]
-center = ["mode","mode","mode","mode","mode","mode","mode","mode",]
-right = ["diagnostics", "spacer","spacer","separator","selections", "spacer","spacer","separator","spacer","spacer","position","position-percentage","spacer","spacer","separator", "spacer","spacer","file-encoding", "file-line-ending", "file-type"]
+center = ["mode","mode","mode","mode","mode","mode","mode","mode","mode","mode","mode","mode","mode","mode","mode","mode",]
+right = ["diagnostics", "spacer","spacer","separator","primary-selection-length","selections", "spacer","spacer","separator","spacer","spacer","position","position-percentage","spacer","spacer","separator", "spacer","spacer","file-encoding", "file-line-ending", "file-type"]
 separator = "│"
