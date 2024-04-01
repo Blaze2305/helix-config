@@ -5,10 +5,17 @@ auto-format = false
 [[language]]
 name = "python"
 indent = { tab-width = 4 , unit = "\t" }
-formatter = { command = "black", args = ["--quiet", "-"] }
-auto-format = true
+auto-format = false
 
+[language-server.pylsp.config.pylsp.plugins.flake8]
+enabled = false
+ignore = ["E501"]
 
-[language-server.pylsp]
-config = { pylsp = { plugins = { flake8 = false, autopep8 = false, pyflakes = false, pycodestyle = false } } }
+[language-server.pylsp.config.pylsp.plugins.autopep8]
+enabled = false
 
+[language-server.pylsp.config.pylsp.plugins.pyflakes]
+enabled = false
+
+[language-server.pylsp.config.pylsp.plugins.pycodestyle]
+enabled = false

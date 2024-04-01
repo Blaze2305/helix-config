@@ -3,6 +3,7 @@ theme = "ayu_dark"
 # theme = "dracula"
 
 [editor]
+popup-border="all"
 true-color = true
 line-number = "absolute"
 idle-timeout = 100
@@ -48,14 +49,13 @@ newline = "⏎"
 render = true
 
 
-# [editor.lsp]
+[editor.lsp]
 # display-inlay-hints = true
-# display-messages = true
-# auto-signature-help = false
+display-messages = true
 
 
 [editor.statusline]
-left = [ "spinner","spacer","separator","spacer","file-name"]
+left = [ "spinner","spacer","separator","spacer","spacer","mode","mode","spacer","file-name","spacer","separator","spacer","version-control"]
 center = ["mode","mode","mode","mode","mode","mode","mode","mode","mode","mode","mode","mode","mode","mode","mode","mode",]
-right = ["diagnostics", "spacer","spacer","separator","primary-selection-length","selections", "spacer","spacer","separator","spacer","spacer","position","position-percentage","spacer","spacer","separator", "spacer","spacer","file-encoding", "file-line-ending", "file-type"]
+right = ["diagnostics", "spacer","spacer","separator","primary-selection-length","selections", "spacer","spacer","separator","spacer","spacer","position","position-percentage", "total-line-numbers","spacer","spacer","separator", "spacer","spacer","file-encoding", "file-line-ending", "file-type", "read-only-indicator"]
 separator = "│"
